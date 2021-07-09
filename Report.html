@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Receipt</title>
+       
+    </head>
+    <body>
+       
+        <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+        <script>
+          function generatePDF() {
+            const element = document.getElementById("content");
+            html2pdf()
+              .from(element)
+              .save();
+          }
+          </script>
+		  <div id="content">
+       <center><h1>Salary Report</h1></center>
+	   <hr>
+	   <b>Name 	  	 :</b>	Sreedhar<br>
+	   <b>Bank Acc No:</b> 124521521254<br>
+	   <b>Class		 :</b> Class I
+		<br><br>
+		<p><b>Month&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Salary&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp TA(17%) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  DA(14%)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp HRA(19%)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PF & Insurance(16%)&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp NetPay</b></p>
+		<hr style=" border-top: 3px double #8c8b8b;">
+		<p>January &nbsp &nbsp &nbsp &nbsp &nbsp 30,000.00&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 5100.00 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4200.00&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 5700.00&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp 4800.00&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 49800.00</p>
+	 	<hr>  
+		<p>&nbsp &nbsp <b>Total&nbsp=</b>&nbsp &nbsp &nbsp &nbsp 30,000.00&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 5100.00 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 4200.00&nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 5700.00&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp 4800.00&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 49800.00</p>
+		   </div>
+		   <p align="right"> <button onclick="generatePDF()">Print</button></p>
+    </body>
+</html>
